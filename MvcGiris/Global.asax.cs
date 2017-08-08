@@ -14,5 +14,6 @@ namespace MvcGiris
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
+        public int MyProperty { get; set; }
     }
 }

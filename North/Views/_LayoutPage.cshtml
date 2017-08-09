@@ -8,9 +8,7 @@
     <title>@ViewBag.Title</title>
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/site.css" rel="stylesheet" />
-    <script src="~/Scripts/jquery-3.1.1.js"></script>
-    <script src="~/Scripts/bootstrap.js"></script>
-    <script src="~/Scripts/app.js"></script>
+   
 </head>
 <body>
     <div class="container">
@@ -23,7 +21,7 @@
                 </p>
             </div>
         </div>
-        <div class="row">@*Menü*@</div>
+        <div class="row">@{Html.RenderAction("MenuPartial", "Home");}</div>
         <div class="row">
             @*içerik*@
             @RenderBody()
@@ -33,6 +31,8 @@
             Velit mollis odio sollicitudin lacinia aliquam posuere, sapien elementum lobortis tincidunt, turpis dui ornare nisl, sollicitudin interdum turpis nunc eget sem nulla eu ultricies orci praesent id augue nec lorem pretium congue sit amet ac nunc fusce iaculis lorem eu diam hendrerit at mattis purus dignissim vivamus mauris tellus, fringilla vel dapibus a, blandit quis erat vivamus elementum aliquam luctus etiam fringilla pretium sem vitae sodales mauris id nulla est praesent laoreet, metus vel auctor aliquam, eros purus vulputate leo, eget consequat neque quam id tellus duis ultricies tempor tortor, vitae dignissim ligula mattis nec in hac habitasse platea dictumst.
         </div>
     </div>
-    
+    <script src="~/Scripts/jquery-3.1.1.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/app.js"></script>
 </body>
 </html>

@@ -15,5 +15,10 @@ namespace North.Controllers
             var kategoriler = new northwindEntities().Categories.ToList();
             return View(kategoriler);
         }
+        public PartialViewResult MenuPartial()
+        {
+            var model = new northwindEntities().Categories.ToList();
+            return PartialView("_PartialMenu",model);
+        }
     }
 }

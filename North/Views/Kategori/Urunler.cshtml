@@ -47,8 +47,8 @@
                     <td>@($"{item.UnitPrice:c2}")</td>
                     <td>@item.UnitsInStock</td>
                     <td>
-                        @(!item.Discontinued ? Html.Raw("<span class='text-succes'>Satışta</span>") : Html.Raw("<span class='text-danger'>Satışta Değil</span>"))
-                    </td>
+                        @(!item.Discontinued ? Html.Raw("<span class='text-succes'>Satışta</span>") : Html.Raw("<span class='text-danger'>Satışta Değil</span>"))</td>
+                    <td><a href="@Url.Action("Duzenle","Urun",new { id = item.ProductID })" class="btn btn-warning btn-block">Düzenle</a> </td>
                 </tr>
                 }
             </tbody>

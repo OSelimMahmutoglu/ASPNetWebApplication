@@ -1,4 +1,5 @@
 ﻿using North.Models;
+using North.Models.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -116,7 +117,16 @@ namespace North.Controllers
         public JsonResult Bul(string key)
         {
             var db = new northwindEntities();
-            var sonuc = db.Products.Where(x => x.ProductName.ToLower().Contains(key.ToLower()) || x.Categories.CategoryName.ToLower().Contains(key.ToLower())).ToList();
+            var sonuc = db.Products.Where(x => x.ProductName.ToLower().Contains(key.ToLower()) || x.Categories.CategoryName.ToLower().Contains(key.ToLower())).Select(x => new ProductViewModel()
+            {
+                ProductsID = x.ProductID,
+                ProductName = x.ProductName,
+                UnitPrice = x.UnitPrice,
+                Discontinued = x.Discontinued,
+                CategoryName = x.Categories.CategoryName,
+                UnitsInStock = x.UnitsInStock,
+                CategoryId = x.CategoryID
+            }).ToList();
             return Json(sonuc, JsonRequestBehavior.AllowGet);
         }
     }

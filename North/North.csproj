@@ -228,6 +228,7 @@
     <Compile Include="Models\Territories.cs">
       <DependentUpon>northwindEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModel\ProductViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

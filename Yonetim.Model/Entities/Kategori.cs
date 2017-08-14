@@ -15,7 +15,7 @@ namespace Yonetim.Model.Entities
         public int Id { get; set; }
 
         [Required]
-        [StringLength(50,ErrorMessage ="Kategori Ado en fazla 50 karakter olabilir")]
+        [StringLength(50,ErrorMessage ="Kategori Adı en fazla 50 karakter olabilir")]
         [Index(IsUnique = true)]
         public string Ad { get; set; }
         public string Aciklama { get; set; }

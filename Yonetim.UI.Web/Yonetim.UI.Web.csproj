@@ -138,6 +138,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\DropDownListDoldurucu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +154,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Kategori\Ekle.cshtml" />
     <Content Include="Views\Kategori\Index.cshtml" />
+    <Content Include="Views\Kategori\Duzenle.cshtml" />
+    <Content Include="Views\Haber\Ekle.cshtml" />
+    <Content Include="Views\Haber\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -163,9 +167,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="dist\" />
-    <Folder Include="Models\" />
     <Folder Include="vendor\" />
-    <Folder Include="Views\Haber\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Yonetim.BLL\Yonetim.BLL.csproj">

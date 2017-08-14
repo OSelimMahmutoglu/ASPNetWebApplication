@@ -28,7 +28,7 @@
                         <th scope="row">@(i+1)</th>
                         <td>@kat.Ad</td>
                         <td>@kat.Aciklama</td>
-                        <td><a href="#" class="btn btn-block btn-warning">Düzenle</a></td>
+                        <td><a href="@Url.Action("Duzenle","Kategori",new { id = kat.Id })" class="btn btn-block btn-warning">Düzenle</a></td>
 
 
                     </tr>

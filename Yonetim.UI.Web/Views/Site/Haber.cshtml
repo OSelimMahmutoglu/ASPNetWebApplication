@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = $"{Model.Baslik}";
+    ViewBag.Keywords = Model.Keywords;
+    Layout = "~/Views/_SiteLayoutPage.cshtml";
+}
+<div class="row">
+    <div class="col-md-10 col-md-offset-2">
+        <div class="text-center haberbaslik">@Model.Baslik</div>
+        <span class="text-right text-lowercase haberinfo">@($"{Model.EklenmeZamani:dd MMM yy ddd}- Okunma: {Model.Hit}")</span>
+        <br />
+        <div class="text-justify habericerik">
+            @Html.Raw(@Model.Icerik)
+        </div>
+    </div>
+    <div>
+        @foreach (var item in Model.Kategoriler)
+        {
+            <span class="text-info text-lowercase">@item.Ad</span>
+        }
+    </div>
+    <div>
+        <span class="text-lowercase">@Model.Keywords.Replace(","," ")</span>
+    </div>
+</div>
+

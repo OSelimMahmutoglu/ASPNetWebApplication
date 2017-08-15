@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,6 +37,37 @@ namespace Yonetim.BLL.Repository
                     db.Database.CurrentTransaction.Rollback();
                 }
 
+            }
+        }
+        public void Update(HaberViewModel model)
+        {
+            MyContext db = new MyContext();
+            using (db.Database.BeginTransaction())
+            {
+                try
+                {
+                    var haber = db.Haberler.Find(model.Id);
+                    if (haber == null)
+                        throw new DbEntityValidationException("Güncellenecek haber bulunamadı");
+
+                    var kategoriler = db.Kategoriler.Where(x => model.Kategoriler.Contains(x.Id)).ToList();
+                     
+                    haber.Baslik = model.Baslik;
+                    haber.Icerik = model.Icerik;
+                    haber.Keywords = model.Keywords;
+                    haber.YayindaMi = model.YayindaMi;
+                    db.SaveChanges();
+
+                    haber.Kategoriler.Clear();
+                    haber.Kategoriler = kategoriler;
+                    db.SaveChanges();
+                    db.Database.CurrentTransaction.Commit();
+                }
+                catch(DbEntityValidationException ex)
+                {
+                    db.Database.CurrentTransaction.Rollback();
+                    throw ex;
+                }
             }
         }
     }

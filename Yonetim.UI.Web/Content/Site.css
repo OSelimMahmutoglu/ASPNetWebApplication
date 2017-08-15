@@ -1,4 +1,5 @@
-﻿.tek{
+﻿@import url('https://fonts.googleapis.com/css?family=Alegreya|Alegreya+Sans:400,400i,500,900,900i|Sedgwick+Ave+Display&subset=latin-ext');
+.tek{
     background-color:tomato;
     color:azure;
 }
@@ -12,4 +13,19 @@
     border:2px solid white;
     padding:0 5px 0 5px;
     background-color:royalblue;
+}
+/*font-family: 'Sedgwick Ave Display', cursive;
+font-family: 'Alegreya', serif;
+font-family: 'Alegreya Sans', sans-serif;*/
+.haberbaslik{
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size:35px;
+    color:darkblue;
+}
+.habericerik{
+    background-image:url("../img/defter.png");
+    background-repeat: repeat;
+}
+.haberinfo{
+    font-family: 'Alegreya Sans', sans-serif;
 }

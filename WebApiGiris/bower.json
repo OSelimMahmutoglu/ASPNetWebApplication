@@ -1,0 +1,7 @@
+{
+  "name": "myproject",
+  "dependencies": {
+    "install": "~1.0.4",
+    "angular-base64-upload": "~0.1.22"
+  }
+}

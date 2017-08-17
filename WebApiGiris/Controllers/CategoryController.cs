@@ -72,7 +72,7 @@ namespace WebApiGiris.Controllers
         }
 
         // PUT: api/Category/5
-        public object Put(int id, [FromBody]CategoryViewModel value)
+        public object Put([FromBody]CategoryViewModel value)
         {
             using (NorthModel db = new NorthModel())
             {
@@ -105,7 +105,7 @@ namespace WebApiGiris.Controllers
         }
 
         // DELETE: api/Category/5
-        public object Delete(int id)
+        public object Delete(int? id)
         {
             if (id == null)
                 return null;
@@ -131,7 +131,7 @@ namespace WebApiGiris.Controllers
                 {
                     return new
                     {
-                        message = "Kategori silme işlemi başarılı",
+                        message = "Kategori silme işlemi hatalı",
                         detail= ex.Message
                     };
                 }

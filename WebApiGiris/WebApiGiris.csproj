@@ -119,6 +119,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bower_components\angular-base64-upload\banner.js" />
+    <Content Include="bower_components\angular-base64-upload\dist\angular-base64-upload.js" />
+    <Content Include="bower_components\angular-base64-upload\dist\angular-base64-upload.min.js" />
+    <Content Include="bower_components\angular-base64-upload\Gulpfile.js" />
+    <Content Include="bower_components\angular-base64-upload\index.js" />
+    <Content Include="bower_components\angular-base64-upload\src\angular-base64-upload.js" />
+    <Content Include="bower_components\install\.gitignore" />
+    <Content Include="bower_components\install\detect-zoom.js" />
+    <Content Include="bower_components\install\detect-zoom.min.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -126,7 +135,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Index.html" />
     <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -137,6 +149,18 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="bower.json" />
+    <Content Include="bower_components\angular-base64-upload\.bower.json" />
+    <Content Include="bower_components\angular-base64-upload\bower.json" />
+    <Content Include="bower_components\angular-base64-upload\CHANGELOG.md" />
+    <Content Include="bower_components\angular-base64-upload\dist\angular-base64-upload.min.js.map" />
+    <Content Include="bower_components\angular-base64-upload\package.json" />
+    <Content Include="bower_components\angular-base64-upload\README.md" />
+    <Content Include="bower_components\install\.bower.json" />
+    <Content Include="bower_components\install\Makefile" />
+    <Content Include="bower_components\install\package.json" />
+    <Content Include="bower_components\install\README.md" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\appcontroller.js" />
     <Content Include="Scripts\appmodule.js" />
@@ -146,7 +170,9 @@
     <Content Include="Scripts\jquery-3.1.1.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
-    <Content Include="Views\Index.html" />
+    <Content Include="Views\category.html" />
+    <Content Include="Views\kategoriekle.html" />
+    <Content Include="Views\kategoriguncelle.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

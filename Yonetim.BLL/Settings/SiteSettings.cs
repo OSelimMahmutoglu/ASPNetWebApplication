@@ -25,5 +25,10 @@ namespace Yonetim.BLL.Settings
 
             //asdasdasd
         }
+
+        void sekersey()
+        {
+
+        }
     }
 }
